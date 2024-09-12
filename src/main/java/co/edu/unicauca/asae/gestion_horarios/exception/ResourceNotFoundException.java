@@ -1,4 +1,4 @@
-package co.edu.unicauca.asae.gestion_horarios;
+package co.edu.unicauca.asae.gestion_horarios.exception;
 
 
 public class ResourceNotFoundException extends RuntimeException {

@@ -1,7 +1,7 @@
 package co.edu.unicauca.asae.gestion_horarios.service;
 
-import co.edu.unicauca.asae.gestion_horarios.BadRequestException;
-import co.edu.unicauca.asae.gestion_horarios.ResourceNotFoundException;
+import co.edu.unicauca.asae.gestion_horarios.exception.BadRequestException;
+import co.edu.unicauca.asae.gestion_horarios.exception.ResourceNotFoundException;
 import co.edu.unicauca.asae.gestion_horarios.model.FranjaHoraria;
 import co.edu.unicauca.asae.gestion_horarios.repository.FranjaHorariaRepository;
 import org.springframework.stereotype.Service;
@@ -61,5 +61,18 @@ public class FranjaHorariaService {
         }
 
         return false;
+    }
+
+    //update
+    public FranjaHoraria updateFranjaHoraria(Long id, FranjaHoraria franjaHoraria) {
+        FranjaHoraria franjaHorariaActual = getFranjaHorariaById(id);
+        franjaHorariaActual.setCurso(franjaHoraria.getCurso());
+        franjaHorariaActual.setProfesor(franjaHoraria.getProfesor());
+        franjaHorariaActual.setEspacioFisico(franjaHoraria.getEspacioFisico());
+        franjaHorariaActual.setPeriodoAcademico(franjaHoraria.getPeriodoAcademico());
+        franjaHorariaActual.setDia(franjaHoraria.getDia());
+        franjaHorariaActual.setHoraInicio(franjaHoraria.getHoraInicio());
+        franjaHorariaActual.setHoraFin(franjaHoraria.getHoraFin());
+        return saveFranjaHoraria(franjaHorariaActual);
     }
 }

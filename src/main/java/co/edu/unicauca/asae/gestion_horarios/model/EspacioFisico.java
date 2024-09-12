@@ -1,5 +1,6 @@
 package co.edu.unicauca.asae.gestion_horarios.model;
 
+import co.edu.unicauca.asae.gestion_horarios.mapper.TipoEspacio;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,6 +19,3 @@ public class EspacioFisico {
     private int capacidad;
 }
 
-enum TipoEspacio {
-    SALON, LABORATORIO, AUDITORIO
-}

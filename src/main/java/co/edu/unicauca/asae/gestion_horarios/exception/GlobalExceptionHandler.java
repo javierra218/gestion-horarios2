@@ -1,7 +1,5 @@
-package co.edu.unicauca.asae.gestion_horarios;
+package co.edu.unicauca.asae.gestion_horarios.exception;
 
-import co.edu.unicauca.asae.gestion_horarios.BadRequestException;
-import co.edu.unicauca.asae.gestion_horarios.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

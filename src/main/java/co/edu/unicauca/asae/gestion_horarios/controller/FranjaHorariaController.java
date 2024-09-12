@@ -37,4 +37,12 @@ public class FranjaHorariaController {
         franjaHorariaService.deleteFranjaHoraria(id);
         return ResponseEntity.noContent().build();
     }
+
+    //update
+    @PutMapping("/{id}")
+    public ResponseEntity<FranjaHoraria> updateFranjaHoraria(@PathVariable Long id, @RequestBody FranjaHoraria franjaHoraria) {
+        franjaHoraria.setId(id);
+        return ResponseEntity.ok(franjaHorariaService.saveFranjaHoraria(franjaHoraria));
+    }
+
 }
